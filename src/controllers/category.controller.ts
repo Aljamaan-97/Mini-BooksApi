@@ -55,7 +55,7 @@ const updatecategory = async (
     }
   } catch (error) {
     console.error("Error updating account:", error);
-    // res.status(500).json({ message: "Internal server error" });
+
     next(error);
   }
 };

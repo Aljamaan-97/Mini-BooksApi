@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MANGO_DB as string);
+    await mongoose.connect(process.env.MONGO_DB as string);
 
     console.log("MongoDB connected successfully");
   } catch (error) {

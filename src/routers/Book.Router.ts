@@ -3,7 +3,7 @@ import {
   createBook,
   getAllBooks,
   getBookById,
-  upDateBook,
+  updateBook,
   deleteBookById,
 } from "../controllers/book.controller";
 import upload from "../middlewares/multer";
@@ -13,7 +13,7 @@ const bookRouter = exspress.Router();
 bookRouter.get("/", getAllBooks);
 bookRouter.post("/", upload.single("image"), createBook);
 bookRouter.get("/:id", getBookById);
-bookRouter.put("/:id", upload.single("image"), upDateBook);
+bookRouter.put("/:bookId", upload.single("image"), updateBook);
 bookRouter.delete("/:id", deleteBookById);
 // bookRouter.get("/images");
 
